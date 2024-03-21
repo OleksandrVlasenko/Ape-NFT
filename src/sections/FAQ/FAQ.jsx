@@ -1,7 +1,9 @@
+import { Title } from "./FAQ.styled";
+
 const FAQ = () => {
 	return (
 		<section>
-			<h2>faq</h2>
+			<Title>faq</Title>
 			<ul>
 				<li>
 					<img src="" alt="" />
