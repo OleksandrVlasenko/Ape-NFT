@@ -1,13 +1,13 @@
 // import logo from './logo.svg';
 import "./App.css";
-import { About } from "./components/About/About";
-import { Arts } from "./components/Arts/Arts";
-import { ContactUs } from "./components/ContactUs/ContactUs";
-import { FAQ } from "./components/FAQ/FAQ";
-import { Footer } from "./components/Footer/Footer";
-import { Header } from "./components/Header/Header";
-import { Hero } from "./components/Hero/Hero";
-import { MindMap } from "./components/MindMap/MindMap";
+import { About } from "./sections/About/About";
+import { Arts } from "./sections/Arts/Arts";
+import { ContactUs } from "./sections/ContactUs/ContactUs";
+import { FAQ } from "./sections/FAQ/FAQ";
+import { Footer } from "./sections/Footer/Footer";
+import { Header } from "./sections/Header/Header";
+import { Hero } from "./sections/Hero/Hero";
+import { MindMap } from "./sections/MindMap/MindMap";
 
 function App() {
 	return (
