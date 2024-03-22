@@ -1,4 +1,4 @@
-import { Title } from "./FAQ.styled";
+import { Title, Number, Name, Description } from "./FAQ.styled";
 
 const FAQ = () => {
 	return (
@@ -7,41 +7,41 @@ const FAQ = () => {
 			<ul>
 				<li>
 					<img src="" alt="" />
-					<p>[ 1 ]</p>
-					<h2>WHAT IS AN NFT COLLECTION?</h2>
-					<p>
+					<Number>[ 1 ]</Number>
+					<Name>What is an nft collection?</Name>
+					<Description>
 						An NFT collection is a group of unique digital assets, each
 						represented by a non-fungible token, typically created around a
 						specific theme or style.
-					</p>
+					</Description>
 				</li>
 				<li>
 					<img src="" alt="" />
-					<p>[ 2 ]</p>
-					<h2>HOW DO I PURCHASE NFTS FROM A COLLECTION?</h2>
-					<p>
+					<Number>[ 2 ]</Number>
+					<Name>How do I purchase nfts from a collection?</Name>
+					<Description>
 						To purchase nfts from a collection, you typically need to use
 						cryptocurrency on a blockchain0based marketplace.
-					</p>
+					</Description>
 				</li>
 				<li>
 					<img src="" alt="" />
-					<p>[ 3 ]</p>
-					<h2>CAN I SELL OR TRADE NFTS FROM A COLLECTION?</h2>
-					<p>
+					<Number>[ 3 ]</Number>
+					<Name>Can I sell or trade nfts from a collection?</Name>
+					<Description>
 						Yes, you can sell or trade NFTs from a collection like you would
 						other digital assets.
-					</p>
+					</Description>
 				</li>
 				<li>
 					<img src="" alt="" />
-					<p>[ 4 ]</p>
-					<h2>WHAT RIGHTS DO I HAVE AS AN OWNER OF AN NFT?</h2>
-					<p>
+					<Number>[ 4 ]</Number>
+					<Name>What rights do I have as an owner of an nft?</Name>
+					<Description>
 						As an NFT owner, you can own, transfer, potentially access exclusive
 						content, resell, but don't automatically get copyright or
 						intellectual property rights.
-					</p>
+					</Description>
 				</li>
 			</ul>
 		</section>
