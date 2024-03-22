@@ -1,13 +1,12 @@
+import { SocialNetworks } from "components/SocialNetworks/SocialNetworks";
+import { Logo } from "components/Logo/Logo";
+
 const Header = () => {
 	return (
 		<header>
-			<div>LOGO</div>
+			<Logo/>
 			<div>MENU</div>
-			<ul>
-				<li>SOCIAL</li>
-				<li>SOCIAL</li>
-				<li>SOCIAL</li>
-			</ul>
+			<SocialNetworks />
 		</header>
 	);
 };
