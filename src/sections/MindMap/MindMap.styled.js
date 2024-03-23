@@ -4,7 +4,7 @@ const Section = styled.section`
 	padding-top: 60px;
 `;
 
-const MindMapItem = styled.li`
+const MindMapItem = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
