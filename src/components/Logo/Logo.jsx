@@ -4,7 +4,7 @@ import { LogoContainer } from "./Logo.styled";
 const Logo = () => {
   return (
 		<LogoContainer>
-			<LogoIcon width={30} height={30} />
+			<LogoIcon width={48} height={32} />
 		</LogoContainer>
 	);
 }

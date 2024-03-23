@@ -1,12 +1,10 @@
 import styled from "@emotion/styled";
 
 const LogoContainer = styled.div`
-	color: teal;
-	width: 200px;
-	height: 200px;
 
+	color: var(--secondary-accent-color);
 	&:hover {
-		color: white;
+		color: var(--text-color);
 	}
 `;
 

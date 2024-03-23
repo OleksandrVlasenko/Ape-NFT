@@ -1,44 +1,39 @@
 import { DiscordIcon } from "components/svg/DiscordIcon/DiscordIcon";
 import { OpenSeaIcon } from "components/svg/OpenSeaIcon/OpenSeaIcon";
 import { SocialXIcon } from "components/svg/SocialXIcon/SocialXIcon";
+import { SocialNetworksList, SocialLink } from "./SocialNetworks.styled";
 
 const SocialNetworks = () => {
 	return (
-		<ul>
+		<SocialNetworksList>
 			<li>
-				<a
+				<SocialLink
 					href="https://discord.com/"
 					target="blank"
 					rel="nofollow noreferrer noopener"
 				>
-					<div>
-						<DiscordIcon width={30} height={30} />
-					</div>
-				</a>
+					<DiscordIcon width={16} height={16} />
+				</SocialLink>
 			</li>
 			<li>
-				<a
+				<SocialLink
 					href="https://opensea.io/"
 					target="blank"
 					rel="nofollow noreferrer noopener"
 				>
-					<div>
-						<OpenSeaIcon width={30} height={30} />
-					</div>
-				</a>
+					<OpenSeaIcon width={16} height={16} />
+				</SocialLink>
 			</li>
 			<li>
-				<a
+				<SocialLink
 					href="https://twitter.com/"
 					target="blank"
 					rel="nofollow noreferrer noopener"
 				>
-					<div>
-						<SocialXIcon width={30} height={30} />
-					</div>
-				</a>
+					<SocialXIcon width={16} height={16} />
+				</SocialLink>
 			</li>
-		</ul>
+		</SocialNetworksList>
 	);
 };
 

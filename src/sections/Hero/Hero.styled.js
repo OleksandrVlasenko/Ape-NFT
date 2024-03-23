@@ -5,6 +5,7 @@ const Section = styled.section`
 	flex-direction: column;
 	align-items: center;
 
+	margin-top: 54px;
 	margin-left: 8px;
 	margin-right: 8px;
 
@@ -53,7 +54,7 @@ const Button = styled.button`
 	width: 216px;
 	padding: 10px 0px 12px 0px;
 	margin-top: 286px;
-  margin-bottom: 16px;
+	margin-bottom: 16px;
 
 	border-radius: 8px;
 	background-color: var(--secondary-accent-color-transparent);

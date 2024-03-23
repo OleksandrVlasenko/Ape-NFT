@@ -30,6 +30,8 @@ const Name = styled.h3`
 `;
 
 const Description = styled.p`
+	margin-top: -10px;
+
 	color: var(--text-color);
 
 	font-family: "Messina Sans Mono";
@@ -37,6 +39,17 @@ const Description = styled.p`
 	font-weight: 400;
 	line-height: 14px;
 	text-transform: uppercase;
+
+	opacity: 0;
+	visibility: hidden;
+	transition: margin-top 300ms linear, opacity 300ms linear 300ms;
+
+	&.active {
+		margin-top: 0;
+		color: red;
+		opacity: 1;
+		visibility: visible;
+	}
 `;
 
 export { Title, Number, Name, Description };
