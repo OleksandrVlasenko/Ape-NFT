@@ -1,9 +1,15 @@
 import styled from "@emotion/styled";
 
+const Section = styled.section`
+	padding-top: 60px;
+`;
+
 const MindMapItem = styled.li`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+
+	margin: 0 auto;
 
 	width: 216px;
 	height: 242px;
@@ -35,4 +41,4 @@ const Description = styled.p`
 	text-transform: uppercase;
 `;
 
-export { MindMapItem, Name, Description };
+export { Section, MindMapItem, Name, Description };

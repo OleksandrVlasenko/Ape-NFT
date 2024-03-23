@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 
 const Title = styled.h2`
+	margin-bottom: 24px;
+
 	color: var(--text-color);
 
 	font-family: "Right Grotesk";
@@ -8,6 +10,7 @@ const Title = styled.h2`
 	font-weight: 900;
 	line-height: 40px;
 	text-transform: uppercase;
+	text-align: center;
 `;
 
 const Number = styled.p`
