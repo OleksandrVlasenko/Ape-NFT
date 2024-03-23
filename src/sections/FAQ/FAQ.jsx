@@ -6,7 +6,6 @@ const FAQ = () => {
 
 	const handleClick = e => {
 		setId(e.currentTarget.getAttribute("id"));
-		console.log(e.currentTarget.getAttribute("id"));
 	};
 	return (
 		<section>

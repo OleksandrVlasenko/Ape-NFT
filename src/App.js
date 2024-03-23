@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import "./App.css";
+// import "./App.css";
 import { About } from "./sections/About/About";
 import { Arts } from "./sections/Arts/Arts";
 import { ContactUs } from "./sections/ContactUs/ContactUs";
