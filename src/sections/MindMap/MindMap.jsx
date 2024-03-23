@@ -1,6 +1,14 @@
 import { Title } from "sections/FAQ/FAQ.styled";
-import { Section, Description, MindMapItem, Name } from "./MindMap.styled";
+import {
+	Section,
+	Description,
+	MindMapItem,
+	Name,
+	MindMapLink,
+	IconContainer,
+} from "./MindMap.styled";
 import { Slider } from "components/Slider/Slider";
+import { ArrowIcon } from "components/svg/ArrowIcon/ArrowIcon";
 
 const MindMap = () => {
 	return (
@@ -35,10 +43,17 @@ const MindMap = () => {
 					</MindMapItem>
 				</div>
 				<div>
-					<MindMapItem>
-						<Description>Arrow</Description>
+					<MindMapLink
+						href="https://google.com"
+						target="blank"
+						rel="nofollow noreferrer noopener"
+					>
+						<IconContainer>
+							<ArrowIcon width={24} height={24} />
+						</IconContainer>
+
 						<Name>Learn more in mind map</Name>
-					</MindMapItem>
+					</MindMapLink>
 				</div>
 			</Slider>
 			{false && (

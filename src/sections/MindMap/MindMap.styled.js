@@ -41,4 +41,28 @@ const Description = styled.p`
 	text-transform: uppercase;
 `;
 
-export { Section, MindMapItem, Name, Description };
+const MindMapLink = styled.a`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-shrink: 0;
+
+	padding: 24px 12px;
+	margin: 0 auto;
+
+	width: 216px;
+	height: 242px;
+
+	border-radius: 12px;
+
+	background: var(--accent-color);
+`;
+
+const IconContainer = styled.div`
+	padding: 12px;
+
+	color: var(--text-color);
+`;
+
+export { Section, MindMapItem, Name, Description, MindMapLink, IconContainer };
