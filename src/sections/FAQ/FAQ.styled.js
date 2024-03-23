@@ -33,7 +33,7 @@ const Name = styled.h3`
 `;
 
 const Description = styled.p`
-	margin-top: -10px;
+	margin-top: -50px;
 
 	color: var(--text-color);
 
@@ -45,14 +45,20 @@ const Description = styled.p`
 
 	opacity: 0;
 	visibility: hidden;
-	transition: margin-top 300ms linear, opacity 300ms linear 300ms;
 
 	&.active {
 		margin-top: 0;
 		color: red;
 		opacity: 1;
 		visibility: visible;
+		transition: margin-top 300ms linear, opacity 300ms linear 300ms;
 	}
 `;
 
-export { Title, Number, Name, Description };
+const DeckriptionContainer = styled.div`
+	height: auto;
+
+	overflow: hidden;
+`;
+
+export { Title, Number, Name, Description, DeckriptionContainer };

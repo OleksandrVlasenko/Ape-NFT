@@ -1,7 +1,10 @@
+import { Section } from "sections/About/About.styled";
+import { Title } from "sections/FAQ/FAQ.styled";
+
 const Arts = () => {
   return (
-		<section>
-			<h2>Collection</h2>
+		<Section>
+			<Title>Collection</Title>
 			<ul>
 				<li>
 					<img src="" alt="" />
@@ -19,7 +22,7 @@ const Arts = () => {
 					<img src="" alt="" />
 				</li>
 			</ul>
-		</section>
+		</Section>
 	);
 };
 
