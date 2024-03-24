@@ -1,6 +1,7 @@
 import { DiscordIcon } from "components/svg/DiscordIcon/DiscordIcon";
 import { MetaMaskIcon } from "components/svg/MetaMaskIcon/MetaMaskIcon";
 import { useEffect, useState } from "react";
+import { Button, ErrorMessage, IconContainer, Input, Label } from "./Form.styled";
 
 const Form = () => {
   const [discord, setDiscord] = useState("");
@@ -38,36 +39,30 @@ const Form = () => {
     }
   };
 
-  const handleValidationIsEmpty = () => {
-    let error = false;
-
-    if (discord === "") {
-      setDiscordErrorValidateMessage("Can not be empty");
-      error = true;
-    }
-
-    if (metaMask === "") {
-      setMetaMaskErrorValidateMessage("Can not be empty");
-      error = true;
-    }
-
-    return error;
-  };
-
-  const handleValidationIsWrongData = () => {
+  const handleValidation = () => {
     const regexDiscord = /^@([a-z]{8})$/;
     const regexMetaMask = /^1x([0-9a-z]{17})$/;
 
     let error = false;
 
-    if (!regexDiscord.test(discord)) {
-      setDiscordErrorValidateMessage("Wrong discord");
+    if (discord === "") {
+      setDiscordErrorValidateMessage("Can not be empty");
       error = true;
+    } else {
+      if (!regexDiscord.test(discord)) {
+        setDiscordErrorValidateMessage("Wrong discord");
+        error = true;
+      }
     }
 
-    if (!regexMetaMask.test(metaMask)) {
-      setMetaMaskErrorValidateMessage("Wrong wallet");
+    if (metaMask === "") {
+      setMetaMaskErrorValidateMessage("Can not be empty");
       error = true;
+    } else {
+      if (!regexMetaMask.test(metaMask)) {
+        setMetaMaskErrorValidateMessage("Wrong wallet");
+        error = true;
+      }
     }
 
     return error;
@@ -76,15 +71,12 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (handleValidationIsEmpty()) {
+    if (handleValidation()) {
       setStatus("error");
       return;
     }
 
-    if (handleValidationIsWrongData()) {
-      setStatus("error");
-      return;
-    }
+    console.log({ discord, metaMask });
 
     setStatus("minted");
 
@@ -101,35 +93,43 @@ const Form = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="discord">
-        <DiscordIcon width={24} height={24} />
-        <input
+      <Label htmlFor="discord">
+        <IconContainer>
+          <DiscordIcon width={24} height={24} />
+        </IconContainer>
+
+        <Input
           onChange={handleChange}
           value={discord}
           name="discord"
           type="text"
           id="discord"
           placeholder="@username"
+          className={discordErrorValidateMessage !== "" ? "isError" : ""}
         />
         {discordErrorValidateMessage !== "" && (
-          <p>{discordErrorValidateMessage}</p>
+          <ErrorMessage>{discordErrorValidateMessage}</ErrorMessage>
         )}
-      </label>
-      <label htmlFor="metamask">
-        <MetaMaskIcon width={24} height={22.55} />
-        <input
+      </Label>
+      <Label htmlFor="metamask">
+        <IconContainer>
+          <MetaMaskIcon width={24} height={22.55} />
+        </IconContainer>
+
+        <Input
           onChange={handleChange}
           value={metaMask}
           name="metaMask"
           type="text"
           id="metamask"
           placeholder="Wallet address"
+          className={metaMaskErrorValidateMessage !== "" ? "isError" : ""}
         />
         {metaMaskErrorValidateMessage !== "" && (
-          <p>{metaMaskErrorValidateMessage}</p>
+          <ErrorMessage>{metaMaskErrorValidateMessage}</ErrorMessage>
         )}
-      </label>
-      <button type="submit">{status}</button>
+      </Label>
+      <Button type="submit">{status}</Button>
     </form>
   );
 };
