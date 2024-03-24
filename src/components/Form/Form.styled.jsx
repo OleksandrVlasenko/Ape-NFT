@@ -51,6 +51,8 @@ const IconContainer = styled.div`
   width: 48px;
   height: 48px;
 
+  color: #5a65f2;
+
   border-radius: 8px 0px 0px 8px;
 
   background: var(--secondary-accent-color);
