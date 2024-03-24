@@ -1,9 +1,11 @@
+import { FooterStyled, Copyright } from "./Footer.styled";
+
 const Footer = () => {
-	return (
-		<footer>
-			<p>© Yacht ape 2024 all rights reserved</p>
-		</footer>
-	);
+  return (
+    <FooterStyled>
+      <Copyright>© Yacht ape 2024 all rights reserved</Copyright>
+    </FooterStyled>
+  );
 };
 
 export { Footer };
