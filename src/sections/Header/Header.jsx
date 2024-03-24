@@ -3,19 +3,20 @@ import { Logo } from "components/Logo/Logo";
 import { HeaderStyled, NavMenuContainer } from "./Header.styled";
 import { NavMenu } from "components/NavMenu/NavMenu";
 import { NavMenuButton } from "components/NavMenuButton/NavMenuButton";
+import { BugrerMenu } from "components/BurgerMenu/BurgerMenu";
 
 const Header = () => {
-	return (
-		<HeaderStyled>
-			<Logo />
-			<NavMenuContainer>
-				{false && <NavMenu />}
-				<NavMenuButton />
-			</NavMenuContainer>
-
+  return (
+    <HeaderStyled>
+      <Logo />
+      <NavMenuContainer>
+        {false && <NavMenu />}
+        <NavMenuButton />
+      </NavMenuContainer>
 			<SocialNetworks />
-		</HeaderStyled>
-	);
+			{false && <BugrerMenu/>}
+    </HeaderStyled>
+  );
 };
 
 export { Header };
