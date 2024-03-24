@@ -1,27 +1,33 @@
-import {NavList, NavLink } from "./NavMenu.styled";
+import PropTypes from "prop-types";
 
-const NavMenu = () => {
+import { NavList, NavLink, Nav } from "./NavMenu.styled";
+
+const NavMenu = ({ onToogle }) => {
   return (
-			<nav>
-				<NavList>
-					<li>
-						<NavLink>About</NavLink>
-					</li>
-					<li>
-						<NavLink>M-Map</NavLink>
-					</li>
-					<li>
-						<NavLink>FAQ</NavLink>
-					</li>
-					<li>
-						<NavLink>Arts</NavLink>
-					</li>
-					<li>
-						<NavLink>Mint</NavLink>
-					</li>
-				</NavList>
-      </nav>
-	);
-}
+    <Nav>
+      <NavList>
+        <li>
+          <NavLink onClick={onToogle}>About</NavLink>
+        </li>
+        <li>
+          <NavLink onClick={onToogle}>M-Map</NavLink>
+        </li>
+        <li>
+          <NavLink onClick={onToogle}>FAQ</NavLink>
+        </li>
+        <li>
+          <NavLink onClick={onToogle}>Arts</NavLink>
+        </li>
+        <li>
+          <NavLink onClick={onToogle}>Mint</NavLink>
+        </li>
+      </NavList>
+    </Nav>
+  );
+};
+
+NavMenu.propTypes = {
+  onToogle: PropTypes.func,
+};
 
 export { NavMenu };

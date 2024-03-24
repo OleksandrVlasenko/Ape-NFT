@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 const SocialNetworksList = styled.ul`
 position: absolute;
-top: 0;
+top: 64px;
 right: 16px;
 
 	display: flex;
@@ -11,23 +11,28 @@ right: 16px;
 `;
 
 const SocialLink = styled.a`
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	width: 48px;
-	height: 48px;
+  width: 48px;
+  height: 48px;
 
-	border-radius: 8px;
-	background: var(--secondary-accent-color-transparent);
+  border-radius: 8px;
+  background: var(--secondary-accent-color-transparent);
 
-	backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 
-	color: var(--secondary-accent-color);
+  color: var(--secondary-accent-color);
 
-	&:hover {
-		color: var(--text-color);
-	}
+  &:hover {
+    color: var(--text-color);
+  }
+
+  .isOpen & {
+    color: var(--text-color);
+    background-color: var(--text-color-transparent);
+  }
 `;
 
 export { SocialNetworksList, SocialLink };

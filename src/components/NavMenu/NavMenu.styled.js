@@ -1,31 +1,55 @@
 import styled from "@emotion/styled";
 
+const Nav = styled.nav`
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 54px));
+  }
+`;
+
 const NavList = styled.ul`
-	display: flex;
+  display: flex;
+
+  @media (max-width: 767px) {
+    display: inline-flex;
+    flex-direction: column;
+		align-items: center;
+    gap: 16px;
+  }
 `;
 
 const NavLink = styled.p`
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  height: 40px;
+  color: var(--text-color);
 
-	width: 48px;
-	height: 48px;
+  font-family: "Messina Sans Mono";
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
 
-	background: var(--secondary-accent-color-transparent);
-	backdrop-filter: blur(6px);
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-	color: var(--secondary-accent-color);
+    width: 48px;
+    height: 48px;
 
-	font-family: "Messina Sans Mono";
-	font-size: 12px;
-	font-weight: 600;
-	line-height: 14px;
-	text-transform: uppercase;
+    background: var(--secondary-accent-color-transparent);
+    backdrop-filter: blur(6px);
 
-	&:hover {
-		color: var(--text-color);
-	}
+    color: var(--secondary-accent-color);
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14px;
+
+    &:hover {
+      color: var(--text-color);
+    }
+  }
 `;
 
-export { NavList, NavLink };
+export { Nav, NavList, NavLink };

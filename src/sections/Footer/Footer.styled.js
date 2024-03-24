@@ -5,6 +5,10 @@ const FooterStyled = styled.footer`
   justify-content: center;
 
   padding: 60px 0 24px 0;
+
+  &.isOpen {
+    margin-bottom: 54px;
+  }
 `;
 
 const Copyright = styled.p`

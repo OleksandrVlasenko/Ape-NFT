@@ -1,28 +1,39 @@
 import styled from "@emotion/styled";
 
 const HeaderStyled = styled.header`
-	position: absolute;
+  position: absolute;
 
-	padding-right: 16px;
-	padding-left: 16px;
+  width: 100%;
 
-	margin-top: 16px;
+  @media (min-width: 480px) {
+    width: 480px;
+  }
 
-	width: 480px;
+  @media (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 1280px;
+  }
 `;
 
 const NavMenuContainer = styled.div`
-	display: flex;
+  position: absolute;
+  top: 8px;
+  right: 16px;
 
-	width: fit-content;
+  display: flex;
 
-	border-radius: 8px;
+  width: fit-content;
 
-	overflow: hidden;
+  border-radius: 8px;
 
-	@media (min-width: 768px) {
-		border-radius: 12px;
-	}
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    border-radius: 12px;
+  }
 `;
 
 export { HeaderStyled, NavMenuContainer };
