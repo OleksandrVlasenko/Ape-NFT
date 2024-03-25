@@ -1,10 +1,6 @@
 import styled from "@emotion/styled";
 
 const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   padding-top: 60px;
 
   @media (max-width: 767px) {
@@ -39,6 +35,27 @@ const Section = styled.section`
 
     @media (min-width: 1280px) {
       column-gap: 85px;
+    }
+  }
+
+  &.mindMap {
+    @media (max-width: 767px) {
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      /* display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 48px;
+
+      grid-template-areas:
+        "t d"
+        "i ."
+        "text ."; */
+    }
+
+    @media (min-width: 1280px) {
+      /* column-gap: 85px; */
     }
   }
 `;

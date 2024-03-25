@@ -27,6 +27,20 @@ const Title = styled.h2`
   line-height: 40px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 80px;
+
+    font-size: 160px;
+    line-height: 160px;
+  }
 `;
 
 const Number = styled.p`
@@ -38,7 +52,7 @@ const Number = styled.p`
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
-	text-align: center;
+  text-align: center;
 
   &.active {
     color: var(--text-color);

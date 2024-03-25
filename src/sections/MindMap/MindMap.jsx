@@ -2,17 +2,18 @@ import PropTypes from "prop-types";
 
 import { Title } from "sections/FAQ/FAQ.styled";
 import {
-  Section,
   Description,
   MindMapItem,
   Name,
   MindMapLink,
   IconContainer,
+  MindMapList,
 } from "./MindMap.styled";
 import { Slider } from "components/Slider/Slider";
 import { ArrowIcon } from "components/svg/ArrowIcon/ArrowIcon";
 import React, { useState, useEffect } from "react";
 import { useWindowWidth } from "hooks/useWindowWidth";
+import { Section } from "sections/About/About.styled";
 
 const MindMap = ({ ref2 }) => {
   const [width, setWidth] = useState();
@@ -23,7 +24,7 @@ const MindMap = ({ ref2 }) => {
     if (windowWidth) setWidth(windowWidth);
   }, [windowWidth]);
   return (
-    <Section ref={ref2}>
+    <Section ref={ref2} className="mindMap">
       <Title>MIND map</Title>
       {width < 768 ? (
         <Slider>
@@ -69,7 +70,7 @@ const MindMap = ({ ref2 }) => {
           </div>
         </Slider>
       ) : (
-        <ul>
+        <MindMapList>
           <li>
             <MindMapItem>
               <Description>
@@ -104,13 +105,16 @@ const MindMap = ({ ref2 }) => {
               rel="nofollow noreferrer noopener"
             >
               <IconContainer>
-                <ArrowIcon width={24} height={24} />
+                <ArrowIcon
+                  width={width < 1280 ? 24 : 40}
+                  height={width < 1280 ? 24 : 40}
+                />
               </IconContainer>
 
               <Name>Learn more in mind map</Name>
             </MindMapLink>
           </li>
-        </ul>
+        </MindMapList>
       )}
     </Section>
   );
