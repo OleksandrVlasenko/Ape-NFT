@@ -4,6 +4,21 @@ const IconContainer = styled.div`
   margin-bottom: 16px;
 
   color: var(--text-color);
+
+  &.about {
+    @media (min-width: 768px) {
+      grid-area: i;
+      justify-self: center;
+
+      margin-top: 68px;
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: 1280px) {
+      margin-top: 56px;
+      margin-bottom: 36px;
+    }
+  }
 `;
 
 const Description = styled.p`
