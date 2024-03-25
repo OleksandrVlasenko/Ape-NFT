@@ -11,8 +11,40 @@ const FaqItem = styled.li`
 
   border-radius: 12px;
 
+  @media (min-width: 768px) {
+    gap: 24px;
+
+    width: 592px;
+
+    border-radius: 16px;
+
+    padding: 18px 16px 23px 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    gap: 31px;
+
+    width: 1032px;
+
+    border-radius: 24px;
+
+    padding: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
   &.active {
     background-color: var(--secondary-accent-color);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
   }
 `;
 
@@ -54,6 +86,20 @@ const Number = styled.p`
   line-height: 20px;
   text-align: center;
 
+  @media (min-width: 768px) {
+    width: 31px;
+
+    font-size: 16px;
+    line-height: 27px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 47px;
+
+    font-size: 24px;
+    line-height: 40px;
+  }
+
   &.active {
     color: var(--text-color);
   }
@@ -71,6 +117,16 @@ const Name = styled.h3`
   font-weight: 900;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 64px;
+    line-height: 64px;
+  }
 
   &.active {
     margin-bottom: 10px;
@@ -95,6 +151,11 @@ const Description = styled.p`
 
   opacity: 0;
   visibility: hidden;
+
+  @media (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
 
   &.active {
     margin-top: 0;
