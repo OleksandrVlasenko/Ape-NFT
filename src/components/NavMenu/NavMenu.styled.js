@@ -6,6 +6,8 @@ const Nav = styled.nav`
     top: 50%;
     left: 50%;
     transform: translate(-50%, calc(-50% - 54px));
+
+    overflow: hidden;
   }
 `;
 
@@ -15,8 +17,22 @@ const NavList = styled.ul`
   @media (max-width: 767px) {
     display: inline-flex;
     flex-direction: column;
-		align-items: center;
+    align-items: center;
     gap: 16px;
+  }
+
+  @media (min-width: 768px) {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 300ms linear, opacity 300ms linear;
+  }
+
+  &.isOpen {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    border-radius: -12px;
   }
 `;
 

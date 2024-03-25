@@ -35,14 +35,25 @@ const Header = ({ ref1, ref2, ref3, ref4, ref5 }) => {
     <HeaderStyled>
       <Logo />
       <NavMenuContainer>
-        {width >= 768 && <NavMenu />}
-        <NavMenuButton onToogle={toogleIsOpen} />
+        {width >= 768 && (
+          <NavMenu
+            onToogle={toogleIsOpen}
+            isOpen={isOpen}
+            ref1={ref1}
+            ref2={ref2}
+            ref3={ref3}
+            ref4={ref4}
+            ref5={ref5}
+          />
+        )}
+        <NavMenuButton onToogle={toogleIsOpen} isOpen={isOpen} width={width} />
       </NavMenuContainer>
       <SocialNetworks />
       {width < 768 && isOpen && (
         <BugrerMenu
           onToogle={toogleIsOpen}
           isOpen={isOpen}
+          width={width}
           ref1={ref1}
           ref2={ref2}
           ref3={ref3}

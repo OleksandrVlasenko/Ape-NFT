@@ -3,13 +3,13 @@ import gsap from "gsap";
 
 import { NavList, NavLink, Nav } from "./NavMenu.styled";
 
-const NavMenu = ({ onToogle, ref1, ref2, ref3, ref4, ref5 }) => {
+const NavMenu = ({ onToogle, isOpen, ref1, ref2, ref3, ref4, ref5 }) => {
   const scrollTo = (target) => {
     gsap.to(window, { duration: 1, scrollTo: target });
   };
   return (
     <Nav>
-      <NavList>
+      <NavList className={isOpen ? "isOpen" : ""}>
         <li>
           <NavLink
             onClick={() => {
@@ -67,6 +67,7 @@ const NavMenu = ({ onToogle, ref1, ref2, ref3, ref4, ref5 }) => {
 
 NavMenu.propTypes = {
   onToogle: PropTypes.func,
+  isOpen: PropTypes.bool,
   ref1: PropTypes.object,
   ref2: PropTypes.object,
   ref3: PropTypes.object,

@@ -10,6 +10,7 @@ const Button = styled.button`
 
   background-color: var(--secondary-accent-color-transparent);
   backdrop-filter: blur(6px);
+  border-radius: 12px;
 
   color: var(--secondary-accent-color);
 
@@ -24,8 +25,12 @@ const Button = styled.button`
   }
 
   &.isOpen {
-    color: var(--text-color);
-    background-color: var(--text-color-transparent);
+    border-radius: 0;
+
+    @media (max-width: 767px) {
+      color: var(--text-color);
+      background-color: var(--text-color-transparent);
+    }
   }
 `;
 
