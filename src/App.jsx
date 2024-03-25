@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <Header ref1={ref1} ref2={ref2} ref3={ref3} ref4={ref4} ref5={ref5} />
-      <main style={{ pointerEvents: "auto" }}>
+      <main>
         <Hero ref5={ref5} />
         <About ref1={ref1} />
         <MindMap ref2={ref2} />

@@ -17,8 +17,6 @@ body {
   margin-right: auto;
 
   background-color: var(--background-color);
-
-  outline: teal solid 1px;
 }
 
 @media (min-width: 480px) {

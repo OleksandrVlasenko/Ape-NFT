@@ -44,7 +44,7 @@ const Section = styled.section`
     padding-left: 194px;
     padding-right: 194px;
 
-    width: 1440px;
+    width: 1408px;
   }
 `;
 
@@ -107,6 +107,13 @@ const Container = styled.div`
   gap: 12px;
 
   width: 216px;
+
+  @media (max-width: 767px) {
+    position: absolute;
+    left: 50%;
+    top: 286px;
+    transform: translateX(-50%);
+  }
 
   @media (min-width: 768px) {
     position: absolute;

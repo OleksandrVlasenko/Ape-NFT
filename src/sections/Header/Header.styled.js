@@ -16,14 +16,16 @@ const HeaderStyled = styled.header`
   @media (min-width: 1280px) {
     width: 1280px;
   }
+
+  @media (min-width: 1440px) {
+    width: 1440px;
+  }
 `;
 
 const NavMenuContainer = styled.div`
   position: absolute;
   top: 8px;
   right: 16px;
-
-  /* z-index: 10000; */
 
   display: flex;
 
