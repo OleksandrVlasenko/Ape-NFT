@@ -23,6 +23,8 @@ const NavMenuContainer = styled.div`
   top: 8px;
   right: 16px;
 
+  /* z-index: 10000; */
+
   display: flex;
 
   width: fit-content;
@@ -32,7 +34,19 @@ const NavMenuContainer = styled.div`
   overflow: hidden;
 
   @media (min-width: 768px) {
+    top: 12px;
+    right: 28px;
+
     border-radius: 12px;
+  }
+
+  @media (min-width: 1280px) {
+    top: 24px;
+    right: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    right: 112px;
   }
 `;
 

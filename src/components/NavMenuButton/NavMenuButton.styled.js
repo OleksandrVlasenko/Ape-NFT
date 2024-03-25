@@ -32,6 +32,14 @@ const Button = styled.button`
       background-color: var(--text-color-transparent);
     }
   }
+
+  @media (min-width: 1280px) {
+    width: 80px;
+    height: 80px;
+
+    font-size: 16px;
+    line-height: 19px;
+  }
 `;
 
 export { Button };

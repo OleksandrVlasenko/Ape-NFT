@@ -66,6 +66,14 @@ const NavLink = styled.p`
       color: var(--text-color);
     }
   }
+
+  @media (min-width: 1280px) {
+    width: 80px;
+    height: 80px;
+
+    font-size: 16px;
+    line-height: 19px;
+  }
 `;
 
 export { Nav, NavList, NavLink };

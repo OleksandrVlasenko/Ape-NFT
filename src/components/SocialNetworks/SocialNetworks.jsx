@@ -5,7 +5,7 @@ import { OpenSeaIcon } from "components/svg/OpenSeaIcon/OpenSeaIcon";
 import { SocialXIcon } from "components/svg/SocialXIcon/SocialXIcon";
 import { SocialNetworksList, SocialLink } from "./SocialNetworks.styled";
 
-const SocialNetworks = ({ onToogle, isOpen }) => {
+const SocialNetworks = ({ onToogle, isOpen, width }) => {
   return (
     <SocialNetworksList className={isOpen ? "isOpen" : ""}>
       <li>
@@ -15,7 +15,7 @@ const SocialNetworks = ({ onToogle, isOpen }) => {
           target="blank"
           rel="nofollow noreferrer noopener"
         >
-          <DiscordIcon width={16} height={16} />
+          <DiscordIcon width={width < 768 ? 16 : 24} height={width < 768 ? 16 : 24} />
         </SocialLink>
       </li>
       <li>
@@ -25,7 +25,7 @@ const SocialNetworks = ({ onToogle, isOpen }) => {
           target="blank"
           rel="nofollow noreferrer noopener"
         >
-          <OpenSeaIcon width={16} height={16} />
+          <OpenSeaIcon width={width < 768 ? 16 : 24} height={width < 768 ? 16 : 24} />
         </SocialLink>
       </li>
       <li>
@@ -35,7 +35,7 @@ const SocialNetworks = ({ onToogle, isOpen }) => {
           target="blank"
           rel="nofollow noreferrer noopener"
         >
-          <SocialXIcon width={16} height={16} />
+          <SocialXIcon width={width < 768 ? 16 : 24} height={width < 768 ? 16 : 24} />
         </SocialLink>
       </li>
     </SocialNetworksList>
@@ -45,6 +45,7 @@ const SocialNetworks = ({ onToogle, isOpen }) => {
 SocialNetworks.propTypes = {
   onToogle: PropTypes.func,
   isOpen: PropTypes.bool,
+  width: PropTypes.number,
 };
 
 export { SocialNetworks };

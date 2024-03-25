@@ -14,11 +14,11 @@ const BugrerMenu = ({ onToogle, isOpen, width, ref1, ref2, ref3, ref4, ref5 }) =
     <>
       {createPortal(
         <BurgerMenuContainer>
-          <Logo onToogle={onToogle} isOpen={isOpen} />
+          <Logo onToogle={onToogle} isOpen={isOpen} width={width} />
           <NavMenuContainer>
-            <NavMenuButton onToogle={onToogle} isOpen={isOpen} width={width}/>
+            <NavMenuButton onToogle={onToogle} isOpen={isOpen} width={width} />
           </NavMenuContainer>
-          <SocialNetworks onToogle={onToogle} isOpen={isOpen} />
+          <SocialNetworks onToogle={onToogle} isOpen={isOpen} width={width} />
           <NavMenu
             onToogle={onToogle}
             ref1={ref1}
