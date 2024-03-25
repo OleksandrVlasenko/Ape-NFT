@@ -19,6 +19,19 @@ const IconContainer = styled.div`
       margin-bottom: 36px;
     }
   }
+
+  &.contactUs {
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: 1280px) {
+      margin-bottom: 40px;
+    }
+  }
 `;
 
 const Description = styled.p`
@@ -34,6 +47,21 @@ const Description = styled.p`
   font-weight: 400;
   line-height: 19px;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    margin: 0 auto 24px auto;
+
+    width: 397px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 40px;
+
+    width: 581px;
+
+    font-size: 24px;
+    line-height: 29px;
+  }
 `;
 
 export { IconContainer, Description };

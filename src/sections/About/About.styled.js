@@ -42,20 +42,13 @@ const Section = styled.section`
     @media (max-width: 767px) {
       display: block;
     }
+  }
 
+  &.contactUs {
     @media (min-width: 768px) {
-      /* display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 48px;
-
-      grid-template-areas:
-        "t d"
-        "i ."
-        "text ."; */
-    }
-
-    @media (min-width: 1280px) {
-      /* column-gap: 85px; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 `;

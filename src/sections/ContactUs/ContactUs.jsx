@@ -8,9 +8,9 @@ import { XIcon } from "components/svg/XIcon/XIcon";
 
 const ContactUs = ({ ref5 }) => {
   return (
-    <Section ref={ref5}>
+    <Section ref={ref5} className="contactUs">
       <Title>Are you in?</Title>
-      <IconContainer>
+      <IconContainer className="contactUs">
         <XIcon width={36} height={36} />
       </IconContainer>
       <Description>

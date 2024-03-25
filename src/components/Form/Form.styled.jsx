@@ -6,6 +6,10 @@ const Label = styled.label`
   display: flex;
 
   margin-bottom: 16px;
+
+  @media (min-width: 1280px) {
+    margin-bottom: 24px;
+  }
 `;
 
 const Input = styled.input`
@@ -28,6 +32,17 @@ const Input = styled.input`
   font-weight: 400;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    width: 200px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 333px;
+    height: 64px;
+
+    border-radius: 0px 12px 12px 0px;
+  }
 
   &.isError {
     color: var(--accent-color);
@@ -59,6 +74,13 @@ const IconContainer = styled.div`
 
   backdrop-filter: blur(6px);
 
+  @media (min-width: 1280px) {
+    width: 64px;
+    height: 64px;
+
+    border-radius: 12px 0px 0px 12px;
+  }
+
   &:hover {
     cursor: pointer;
   }
@@ -77,6 +99,11 @@ const ErrorMessage = styled.p`
   font-weight: 400;
   line-height: 12px;
   text-transform: uppercase;
+
+  @media (min-width: 1280px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
 `;
 
 const Button = styled.button`
@@ -98,6 +125,17 @@ const Button = styled.button`
   font-weight: 900;
   line-height: 19px;
   text-transform: uppercase;
+
+  @media (min-width: 780px) {
+    width: 247px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 397px;
+    padding: 16px 0 20px 0;
+
+    border-radius: 12px;
+  }
 
   &:hover {
     color: var(--secondary-accent-color);
