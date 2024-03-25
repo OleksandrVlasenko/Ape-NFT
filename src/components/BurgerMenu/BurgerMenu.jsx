@@ -9,7 +9,7 @@ import { SocialNetworks } from "components/SocialNetworks/SocialNetworks";
 import { Footer } from "sections/Footer/Footer";
 import { NavMenuContainer } from "sections/Header/Header.styled";
 
-const BugrerMenu = ({ onToogle, isOpen }) => {
+const BugrerMenu = ({ onToogle, isOpen, ref1, ref2, ref3, ref4, ref5 }) => {
   return (
     <>
       {createPortal(
@@ -19,7 +19,14 @@ const BugrerMenu = ({ onToogle, isOpen }) => {
             <NavMenuButton onToogle={onToogle} isOpen={isOpen} />
           </NavMenuContainer>
           <SocialNetworks onToogle={onToogle} isOpen={isOpen} />
-          <NavMenu onToogle={onToogle} />
+          <NavMenu
+            onToogle={onToogle}
+            ref1={ref1}
+            ref2={ref2}
+            ref3={ref3}
+            ref4={ref4}
+            ref5={ref5}
+          />
           <Footer isOpen={isOpen} />
         </BurgerMenuContainer>,
         document.getElementById("modal-root")
@@ -31,6 +38,11 @@ const BugrerMenu = ({ onToogle, isOpen }) => {
 BugrerMenu.propTypes = {
   onToogle: PropTypes.func,
   isOpen: PropTypes.bool,
+  ref1: PropTypes.object,
+  ref2: PropTypes.object,
+  ref3: PropTypes.object,
+  ref4: PropTypes.object,
+  ref5: PropTypes.object,
 };
 
 export { BugrerMenu };

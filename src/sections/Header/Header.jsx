@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { SocialNetworks } from "components/SocialNetworks/SocialNetworks";
 import { Logo } from "components/Logo/Logo";
 import { HeaderStyled, NavMenuContainer } from "./Header.styled";
@@ -7,7 +9,7 @@ import { BugrerMenu } from "components/BurgerMenu/BurgerMenu";
 import { useEffect, useState } from "react";
 import { useWindowWidth } from "hooks/useWindowWidth";
 
-const Header = () => {
+const Header = ({ ref1, ref2, ref3, ref4, ref5 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [width, setWidth] = useState();
 
@@ -38,10 +40,26 @@ const Header = () => {
       </NavMenuContainer>
       <SocialNetworks />
       {width < 768 && isOpen && (
-        <BugrerMenu onToogle={toogleIsOpen} isOpen={isOpen} />
+        <BugrerMenu
+          onToogle={toogleIsOpen}
+          isOpen={isOpen}
+          ref1={ref1}
+          ref2={ref2}
+          ref3={ref3}
+          ref4={ref4}
+          ref5={ref5}
+        />
       )}
     </HeaderStyled>
   );
+};
+
+Header.propTypes = {
+  ref1: PropTypes.object,
+  ref2: PropTypes.object,
+  ref3: PropTypes.object,
+  ref4: PropTypes.object,
+  ref5: PropTypes.object,
 };
 
 export { Header };

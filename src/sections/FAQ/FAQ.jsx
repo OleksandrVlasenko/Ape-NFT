@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { useEffect, useState } from "react";
 import {
   Title,
@@ -10,7 +12,7 @@ import {
 import { Section } from "sections/About/About.styled";
 import { useWindowWidth } from "hooks/useWindowWidth";
 
-const FAQ = () => {
+const FAQ = ({ ref3 }) => {
   const [id, setId] = useState("1");
   const [width, setWidth] = useState();
 
@@ -24,7 +26,7 @@ const FAQ = () => {
     setId(e.currentTarget.getAttribute("id"));
   };
   return (
-    <Section>
+    <Section ref={ref3}>
       <Title>FAQ</Title>
       <ul>
         <FaqItem
@@ -116,6 +118,10 @@ const FAQ = () => {
       </ul>
     </Section>
   );
+};
+
+FAQ.propTypes = {
+  ref3: PropTypes.object,
 };
 
 export { FAQ };

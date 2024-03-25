@@ -1,10 +1,12 @@
+import PropTypes from "prop-types";
+
 import { IconContainer } from "sections/ContactUs/ContactUs.styled";
 import { Description, Section, Title, Text } from "./About.styled";
 import { XIcon } from "components/svg/XIcon/XIcon";
 import { useEffect, useState } from "react";
 import { useWindowWidth } from "hooks/useWindowWidth";
 
-const About = () => {
+const About = ({ ref1 }) => {
   const [width, setWidth] = useState();
 
   const windowWidth = useWindowWidth();
@@ -13,7 +15,7 @@ const About = () => {
     if (windowWidth) setWidth(windowWidth);
   }, [windowWidth]);
   return (
-    <Section>
+    <Section ref={ref1}>
       <Title>
         a Story that started with
         <span> one simple {width < 768 && <br />} ape</span>
@@ -32,6 +34,10 @@ const About = () => {
       <div>...Have no limits...</div>
     </Section>
   );
+};
+
+About.propTypes = {
+  ref1: PropTypes.object,
 };
 
 export { About };
